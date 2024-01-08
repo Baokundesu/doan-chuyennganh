@@ -16,7 +16,7 @@ class DiemController extends Controller
         $subjects = MonHoc::all();
         $nienkhoas = NienKhoa::all();
 
-        return view('Teacher.score', compact('students', 'subjects', 'nienkhoas'));
+        return view('Teacher.Import', compact('students', 'subjects', 'nienkhoas'));
     }
 
     public function create(Request $request)
@@ -42,7 +42,7 @@ class DiemController extends Controller
         }
     }
 
-    public function index()
+    public function index(Request $request)
     {
         $nienkhoas = NienKhoa::all();
         $scores = Diem::query();
@@ -63,7 +63,7 @@ class DiemController extends Controller
             $scores->where('MaLinhVuc', $request->input('MaLinhVuc'));
         }
 
-        $scores = Diem::all();
+        $scores = $scores->get(); // Lấy dữ liệu sau khi áp dụng các điều kiện lọc
         return view('Teacher.score_index', compact('scores'));
     }
 }

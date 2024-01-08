@@ -1,17 +1,18 @@
 <?php
-
 namespace App\Imports;
 
-use Illuminate\Support\Collection;
-use Maatwebsite\Excel\Concerns\ToCollection;
+use Maatwebsite\Excel\Concerns\ToModel;
+use App\Models\Diem;
 
-class Import implements ToCollection
+class DiemImport implements ToModel
 {
-    /**
-    * @param Collection $collection
-    */
-    public function collection(Collection $collection)
+    public function model(array $row)
     {
-        //
+        return new Diem([
+            'MSSV' => $row[0],
+            'MaMonHoc' => $row[1],
+            'DiemTK' => $row[2],
+            'MaNK' => $row[3],
+        ]);
     }
 }

@@ -12,9 +12,10 @@ class Diem extends Model
     protected $table = 'TongHop';
 
     protected $fillable = [
+        'MaNK',
         'MSSV', 
         'MaMonHoc', 
-        'DiemTK', 
-        'MaNK'
+        'DiemTK',
+        'MaGV', 
     ];
 }

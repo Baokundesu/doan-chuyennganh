@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>How Well SITers</title>
+  <title>How Well for SITers</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -19,7 +19,7 @@
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="#" class="h1"><b>How Well SITers</b><br>TVU</a>
+      <a href="#" class="h1"><b>How Well for SITers</b></a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Đăng nhập để tiếp tục</p>

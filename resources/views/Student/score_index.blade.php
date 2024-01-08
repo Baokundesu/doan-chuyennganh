@@ -23,6 +23,7 @@
                                 </thead>
                                 <tbody>
                                     @foreach($scores as $score)
+                                    @if(auth()->user()->role == 'student' && auth()->user()->student->MSSV == $score->MSSV)
                                     <tr>
                                         <td>{{ $score->MaNK }}</td>
                                         <td>{{ $score->MSSV }}</td>
@@ -30,8 +31,18 @@
                                         <td>{{ $score->DiemTK }}</td>
                                         <td>{{ $score->MaGV }}</td>
                                     </tr>
+                                    @endif
                                     @endforeach
                                 </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>Mã NK</th>
+                                        <th>MSSV</th>
+                                        <th>Mã Môn Học</th>
+                                        <th>Điểm TK</th>
+                                        <th>Mã GV</th>
+                                    </tr>
+                                </tfoot>
                             </table>
                         </div>
                     </div>
